@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OutfitRepeat — Luxury digital wardrobe and intelligent clothing combination planner. Elevate your everyday style sustainably.">
+  <title>OutfitRepeat — Clothing Combination Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#home" class="logo" aria-label="OutfitRepeat home">
+        <span class="logo-mark">✧</span> Outfit<span>Repeat</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active" data-page="home">Home</a>
+        <a href="#wardrobe" class="nav-link" data-page="wardrobe">Digital Wardrobe</a>
+        <a href="#planner" class="nav-link" data-page="planner">Outfit Planner</a>
+        <a href="#favourites" class="nav-link" data-page="favourites">Favourites</a>
+        <a href="#history" class="nav-link" data-page="history">Wear History</a>
+        <a href="#dashboard" class="nav-link" data-page="dashboard">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-outline auth-button" id="auth-btn">Sign In</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Home Section -->
+    <section id="page-home" class="page-section active">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="eyebrow">Sustainable Digital Closet</span>
+          </div>
+          <h1 class="hero-title">Your Wardrobe,<br><em>Endless Possibilities.</em></h1>
+          <p class="hero-subtitle">Rediscover what you already own. Curate mindful combinations, craft signature silhouettes, and unlock the true creative potential of a conscious capsule wardrobe.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary nav-trigger" data-page="planner">
+              Open Outfit Planner <span class="arrow-icon">↗</span>
+            </button>
+            <button class="btn btn-secondary nav-trigger" data-page="wardrobe">
+              Explore Digital Wardrobe
+            </button>
+          </div>
+          <div class="hero-stats-mini">
+            <div class="mini-stat">
+              <span class="mini-num">100%</span>
+              <span class="mini-lbl">Conscious Styling</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="mini-stat">
+              <span class="mini-num">∞</span>
+              <span class="mini-lbl">Combinations</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="mini-stat">
+              <span class="mini-num">30+</span>
+              <span class="mini-lbl">Wears Goal</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="editorial-frame">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="High fashion editorial clothing collection" class="hero-img">
+            <div class="floating-outfit-tag">
+              <span class="tag-title">Autumn Editorial Edit</span>
+              <span class="tag-sub">Linen &bull; Tailored &bull; Minimal</span>
+            </div>
+            <div class="image-caption">
+              <span>VOL. IV &bull; THE CAPSULE MANIFESTO</span>
+              <span>SLOW FASHION DIGITAL LAB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlight Strip -->
+      <section class="intro-strip container">
+        <div class="intro-col-left">
+          <span class="eyebrow">The Sustainable Approach</span>
+          <h2>Less Buying.<br>More Styling.</h2>
+        </div>
+        <div class="intro-col-mid">
+          <p>Most individuals wear only 20% of their wardrobe 80% of the time. OutfitRepeat transforms your closet into an interactive styling atelier—reigniting love for every piece you already possess.</p>
+        </div>
+        <div class="intro-col-right">
+          <button class="btn btn-outline nav-trigger" data-page="wardrobe">Explore The Experience <span>→</span></button>
+        </div>
+      </section>
+
+      <!-- 4 Pillars Section -->
+      <section class="features-grid container">
+        <article class="feature-card">
+          <div class="feature-icon">01</div>
+          <span class="feature-tag">Organize</span>
+          <h3>Digital Wardrobe</h3>
+          <p>Digitize your garments with beautiful photography, clear categories, and color palettes for effortless closet clarity.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">02</div>
+          <span class="feature-tag">Create</span>
+          <h3>Outfit Planner</h3>
+          <p>An interactive drag-free mix-and-match canvas to assemble harmonious looks across Tops, Bottoms, Shoes, and Accessories.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">03</div>
+          <span class="feature-tag">Curate</span>
+          <h3>Saved Favourites</h3>
+          <p>Build your private lookbook of go-to aesthetics for work, weekend getaways, and special occasions. Reload into the planner in one click.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">04</div>
+          <span class="feature-tag">Sustain</span>
+          <h3>Mindful Wear History</h3>
+          <p>Track your actual garment wear frequency, avoid repetitive outfits, and maximize cost-per-wear value effortlessly.</p>
+        </article>
+      </section>
+
+      <!-- Editorial Quote Banner -->
+      <section class="quote-banner container">
+        <blockquote>
+          “The most sustainable garment is the one already hanging in your closet.”
+        </blockquote>
+        <cite>— Fashion Revolution &bull; The Art of Rewearing</cite>
+      </section>
+    </section>
+
+    <!-- 2. Personal Dashboard -->
+    <section id="page-dashboard" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Style Analytics &bull; Capsule Metrics</span>
+          <h2 class="section-title">Personal Dashboard</h2>
+          <p class="section-description">A real-time snapshot of your closet utilization, styling volume, and capsule wardrobe performance.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="dash-card">
+            <div class="dash-header">
+              <span class="dash-icon">🧥</span>
+              <span class="dash-badge">Closet Size</span>
+            </div>
+            <span class="dash-value" id="stat-total-items">0</span>
+            <span class="dash-label">Total Wardrobe Items</span>
+            <div class="dash-footer">Across all 5 curated categories</div>
+          </article>
+
+          <article class="dash-card">
+            <div class="dash-header">
+              <span class="dash-icon">✨</span>
+              <span class="dash-badge">Lookbook</span>
+            </div>
+            <span class="dash-value" id="stat-saved-outfits">0</span>
+            <span class="dash-label">Saved Outfit Combinations</span>
+            <div class="dash-footer">Curated looks ready to wear</div>
+          </article>
+
+          <article class="dash-card">
+            <div class="dash-header">
+              <span class="dash-icon">📅</span>
+              <span class="dash-badge">Wear Log</span>
+            </div>
+            <span class="dash-value" id="stat-repeats-avoided">0</span>
+            <span class="dash-label">Total Worn Logs</span>
+            <div class="dash-footer">Recorded styled wear days</div>
+          </article>
+
+          <article class="dash-card highlight-card">
+            <div class="dash-header">
+              <span class="dash-icon">♻️</span>
+              <span class="dash-badge badge-gold">Capsule KPI</span>
+            </div>
+            <span class="dash-value" id="stat-efficiency">0%</span>
+            <span class="dash-label">Capsule Efficiency</span>
+            <div class="efficiency-bar-container">
+              <div class="efficiency-bar" id="stat-efficiency-bar" style="width: 0%;"></div>
+            </div>
+            <div class="dash-footer" id="stat-efficiency-text">0 of 0 garments styled into looks</div>
+          </article>
+        </div>
+
+        <!-- Category Distribution & Quick Links -->
+        <div class="dashboard-breakdown">
+          <div class="breakdown-card">
+            <h3 class="card-title">Wardrobe Composition</h3>
+            <div class="category-distribution" id="category-distribution">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+          <div class="breakdown-card cta-card">
+            <h3 class="card-title">Styling Suggestions</h3>
+            <p>Ready to discover a new combination today? Take your existing pieces for a spin on the planner canvas.</p>
+            <div class="dashboard-actions">
+              <button class="btn btn-primary nav-trigger" data-page="planner">Open Outfit Planner</button>
+              <button class="btn btn-secondary nav-trigger" data-page="wardrobe">Add New Garment</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-note">
+          <span class="note-icon">🔒</span>
+          <div>
+            <strong>Private &amp; Offline-Ready Storage:</strong> All wardrobe items, lookbooks, and wear logs are stored locally within your browser. No external accounts or servers required.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Digital Wardrobe -->
+    <section id="page-wardrobe" class="page-section">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="eyebrow">Curated Collection</span>
+            <h2 class="section-title">Digital Wardrobe</h2>
+            <p class="section-description">Manage, search, and document your personal pieces with high-definition fashion clarity.</p>
+          </div>
+          <button class="btn btn-primary" id="open-add-modal">
+            <span>＋</span> Add Clothing Item
+          </button>
+        </div>
+
+        <!-- Controls Bar: Category Filters & Search -->
+        <div class="wardrobe-controls">
+          <div class="category-bar" role="group" aria-label="Filter wardrobe by category">
+            <button class="cat-filter active" data-category="all">All Items <span class="pill-count" id="count-all">0</span></button>
+            <button class="cat-filter" data-category="Tops">Tops <span class="pill-count" id="count-Tops">0</span></button>
+            <button class="cat-filter" data-category="Bottoms">Bottoms <span class="pill-count" id="count-Bottoms">0</span></button>
+            <button class="cat-filter" data-category="Dresses">Dresses <span class="pill-count" id="count-Dresses">0</span></button>
+            <button class="cat-filter" data-category="Shoes">Shoes <span class="pill-count" id="count-Shoes">0</span></button>
+            <button class="cat-filter" data-category="Accessories">Accessories <span class="pill-count" id="count-Accessories">0</span></button>
+          </div>
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="wardrobe-search" placeholder="Search by piece, color, or tag..." aria-label="Search clothing items">
+            <button class="search-clear" id="search-clear" aria-label="Clear search" style="display: none;">×</button>
+          </div>
+        </div>
+
+        <div class="wardrobe-grid" id="wardrobe-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Outfit Planner -->
+    <section id="page-planner" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Mix &bull; Match &bull; Style</span>
+          <h2 class="section-title">Interactive Outfit Planner</h2>
+          <p class="section-description">Select garments from your collection to style balanced 4-piece ensembles.</p>
+        </div>
+
+        <div class="planner-layout">
+          <!-- Left: Clothing Selection Sidebar -->
+          <aside class="planner-sidebar">
+            <div class="sidebar-header">
+              <h3 class="sidebar-heading">Garment Vault</h3>
+              <span class="sidebar-hint">Click item to slot</span>
+            </div>
+            <div class="mini-category-tabs" id="planner-tabs">
+              <button class="mini-tab active" data-cat="Tops">Tops</button>
+              <button class="mini-tab" data-cat="Bottoms">Bottoms</button>
+              <button class="mini-tab" data-cat="Dresses">Dresses</button>
+              <button class="mini-tab" data-cat="Shoes">Shoes</button>
+              <button class="mini-tab" data-cat="Accessories">Acc.</button>
+            </div>
+            <div class="picker-grid" id="picker-grid">
+              <!-- Rendered items -->
+            </div>
+          </aside>
+
+          <!-- Right: Visual Mix & Match Canvas (4 Visual Slots) -->
+          <section class="planner-canvas">
+            <div class="canvas-top">
+              <div>
+                <span class="eyebrow">Mix-and-Match Atelier</span>
+                <h3 class="canvas-heading">Current Combination</h3>
+              </div>
+              <div class="canvas-meta">
+                <span class="canvas-count" id="canvas-count">0 items selected</span>
+              </div>
+            </div>
+
+            <!-- 4 Visual Outfit Slots -->
+            <div class="slots-container">
+              <!-- Slot 1: Top (or One-Piece Dress) -->
+              <div class="outfit-slot-wrapper">
+                <div class="slot-label">01 / Top</div>
+                <div class="outfit-slot" data-slot="Top">
+                  <span class="slot-placeholder">Select a Top or Dress</span>
+                </div>
+              </div>
+
+              <!-- Slot 2: Bottom -->
+              <div class="outfit-slot-wrapper">
+                <div class="slot-label">02 / Bottom</div>
+                <div class="outfit-slot" data-slot="Bottom">
+                  <span class="slot-placeholder">Select a Bottom</span>
+                </div>
+              </div>
+
+              <!-- Slot 3: Shoes -->
+              <div class="outfit-slot-wrapper">
+                <div class="slot-label">03 / Shoes</div>
+                <div class="outfit-slot" data-slot="Shoes">
+                  <span class="slot-placeholder">Select Shoes</span>
+                </div>
+              </div>
+
+              <!-- Slot 4: Accessories -->
+              <div class="outfit-slot-wrapper">
+                <div class="slot-label">04 / Accessories</div>
+                <div class="outfit-slot" data-slot="Accessories">
+                  <span class="slot-placeholder">Select Accessories</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canvas Action Buttons -->
+            <div class="canvas-actions">
+              <button class="btn btn-outline" id="clear-canvas-btn">
+                <span>✕</span> Clear Canvas
+              </button>
+              <button class="btn btn-secondary" id="save-favourite-btn">
+                <span>♡</span> Save to Favourites
+              </button>
+              <button class="btn btn-primary" id="log-worn-btn">
+                <span>✓</span> Log as Worn Today
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Favourites Section -->
+    <section id="page-favourites" class="page-section">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="eyebrow">Curated Combinations</span>
+            <h2 class="section-title">Saved Favourites</h2>
+            <p class="section-description">Your personalized lookbook. Review saved ensembles or load them instantly back into the planner.</p>
+          </div>
+          <button class="btn btn-outline nav-trigger" data-page="planner">Style New Outfit</button>
+        </div>
+        <div class="favourites-grid" id="favourites-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Wear History Section -->
+    <section id="page-history" class="page-section">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="eyebrow">Style Journal &bull; Rewear Log</span>
+            <h2 class="section-title">Wear History</h2>
+            <p class="section-description">A chronological timeline of every outfit you have worn. Keep your wardrobe mindful and intentional.</p>
+          </div>
+          <button class="btn btn-outline nav-trigger" data-page="planner">Log Today's Look</button>
+        </div>
+        <div class="history-timeline" id="history-timeline">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">✧</span> Outfit<span>Repeat</span>
+        </a>
+        <p class="footer-tagline">A thoughtful, luxury digital closet companion dedicated to sustainable fashion, creative reuse, and capsule wardrobe empowerment.</p>
+        <span class="sustainability-badge">🌿 Zero Waste Fashion Initiative</span>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#home" class="nav-trigger" data-page="home">Home</a>
+          <a href="#wardrobe" class="nav-trigger" data-page="wardrobe">Digital Wardrobe</a>
+          <a href="#planner" class="nav-trigger" data-page="planner">Outfit Planner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="#favourites" class="nav-trigger" data-page="favourites">Saved Looks</a>
+          <a href="#history" class="nav-trigger" data-page="history">Wear Journal</a>
+          <a href="#dashboard" class="nav-trigger" data-page="dashboard">Style Analytics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Philosophy</h4>
+          <span>#30WearsChallenge</span>
+          <span>Capsule Minimalism</span>
+          <span>Cost-Per-Wear Optimization</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 OutfitRepeat &bull; Designed for mindful fashion enthusiasts.</p>
+      <p class="footer-note">All images courtesy of fashion editorial archives.</p>
+    </div>
+  </footer>
+
+  <!-- Add/Edit Wardrobe Item Modal -->
+  <div class="modal" id="add-item-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" id="modal-eyebrow">Garment Registration</span>
+          <h3 id="modal-title">Add Clothing Item</h3>
+        </div>
+        <button class="modal-close" id="close-add-modal" aria-label="Close dialog">×</button>
+      </div>
+
+      <form id="add-item-form">
+        <input type="hidden" id="editing-item-id">
+        
+        <div class="form-group">
+          <label for="item-name">Garment Name <span class="required">*</span></label>
+          <input type="text" id="item-name" placeholder="e.g. Ivory Oversized Linen Shirt" required maxlength="70">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="item-category">Category <span class="required">*</span></label>
+            <select id="item-category" required>
+              <option value="Tops">Tops &amp; Blouses</option>
+              <option value="Bottoms">Bottoms &amp; Trousers</option>
+              <option value="Dresses">Dresses &amp; Jumpsuits</option>
+              <option value="Shoes">Shoes &amp; Footwear</option>
+              <option value="Accessories">Accessories &amp; Bags</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="item-color">Color / Hue</label>
+            <input type="text" id="item-color" placeholder="e.g. Cream / Sand / Camel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Item Photography</label>
+          <div class="image-upload-wrapper">
+            <div class="image-preview-container" id="image-preview-container">
+              <img id="image-preview" src="" alt="Garment Preview" style="display: none;">
+              <div class="preview-empty" id="preview-empty">
+                <span class="camera-icon">📷</span>
+                <span>No photo selected</span>
+              </div>
+            </div>
+            <div class="upload-options">
+              <label class="file-upload-btn" for="item-image-file">
+                <span>📁 Upload Photo</span>
+                <input type="file" id="item-image-file" accept="image/*">
+              </label>
+              <span class="or-separator">or image URL</span>
+              <input type="url" id="item-image" placeholder="https://images.unsplash.com/...">
+            </div>
+          </div>
+          <small class="field-help">Upload JPG, PNG, or WEBP from your device, or paste a high-res image URL.</small>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancel-item-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-item-btn">Save Garment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
